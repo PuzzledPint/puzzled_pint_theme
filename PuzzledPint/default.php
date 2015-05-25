@@ -39,7 +39,7 @@
 			</div>
 			<div id="footer">
 				<div id="license_info">
-					Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+					Unless otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
 				</div>
 			</div>
 				<?php  defined('C5_EXECUTE') or die("Access Denied."); ?>
