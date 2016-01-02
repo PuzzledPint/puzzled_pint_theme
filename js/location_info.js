@@ -3,15 +3,12 @@ var padding = 'style="padding-left: 30px;"';
 
 function populate_data(id) {
   url = 'http://beta.puzzledpint.com/events/' + id + '/locations'
-  console.log('getting data from..' + url);
+  //url = 'http://localhost:3000/events/' + id + '/locations'
   var jqxhr = $.ajax(url)
     .done(function(msg) {
-      console.log('received: ');
-      console.log(msg);
       render_locations(msg.locations);
     })
     .fail(function(msg) {
-      console.log('something went wrong');
       $(location_div).html('<h1>An error as occured. Please contact GC\
          <a href="mailto:gamecontrol@puzzledpint.com">gamecontrol@puzzledpint.com</a></h1>');
     });
@@ -36,12 +33,14 @@ function render_bar_details(bar, child) {
   child = child || false;
 
   var view = city_name(bar.city, child);
-  view += '<p class="p1"><strong>' + bar.start_time + '</strong><br /></p>';
+  view += '<p class="p1"><strong>' + bar.start_time + ' - ' +
+    bar.stop_time + '</strong><br /></p>';
   view += '<p class="p1">' + bar.notes + '</p>';
 
   var address = bar.address;
 
-  view += '<p><strong>' + bar.bar + '<br />';
+  view += '<p><strong>'
+  view += bar_name(bar) + '<br />';
   view += address.street_1 + '<br />';
   if (address.street_2) {
     view += address.street_2 + '<br />';
@@ -73,3 +72,10 @@ function city_name(city, child) {
   }
 }
 
+function bar_name(bar) {
+  if (bar.bar_url) {
+   return '<a href="' + bar.bar_url + '">' + bar.bar + '</a>';
+  } else {
+   return bar.bar;
+  }
+}
