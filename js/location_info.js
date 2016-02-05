@@ -33,20 +33,24 @@ function render_bar_details(bar, child) {
   child = child || false;
 
   var view = city_name(bar.city, child);
-  view += '<p class="p1"><strong>' + bar.start_time + ' - ' +
-    bar.stop_time + '</strong><br /></p>';
+  if (bar.start_time) {
+    view += '<p class="p1"><strong>' + bar.start_time + ' - ' +
+      bar.stop_time + '</strong><br /></p>';
+  }
+
   view += '<p class="p1">' + bar.notes + '</p>';
 
   var address = bar.address;
-
-  view += '<p><strong>'
-  view += bar_name(bar) + '<br />';
-  view += address.street_1 + '<br />';
-  if (address.street_2) {
-    view += address.street_2 + '<br />';
+  if (address) {
+    view += '<p><strong>'
+    view += bar_name(bar) + '<br />';
+    view += address.street_1 + '<br />';
+    if (address.street_2) {
+      view += address.street_2 + '<br />';
+    }
+    view += address.city + ',' + address.state + ' ' + address.postal_code;
+    view += '</strong></p>'
   }
-  view += address.city + ',' + address.state + ' ' + address.postal_code;
-  view += '</strong></p>'
 
   return view;
 }
