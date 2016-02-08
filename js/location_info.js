@@ -9,7 +9,7 @@ function populate_data(id) {
       render_locations(msg.locations);
     })
     .fail(function(msg) {
-      $(location_div).html('<h1>An error as occured. Please contact GC\
+      $(location_div).html('<h1>An error has occured. Please contact GC\
          <a href="mailto:gamecontrol@puzzledpint.com">gamecontrol@puzzledpint.com</a></h1>');
     });
 }
