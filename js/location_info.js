@@ -48,7 +48,7 @@ function render_bar_details(bar, child) {
     if (address.street_2) {
       view += address.street_2 + '<br />';
     }
-    view += address.city + ',' + address.state + ' ' + address.postal_code;
+    view += address.city + ', ' + address.state + ' ' + address.postal_code;
     view += '</strong></p>'
   }
 
