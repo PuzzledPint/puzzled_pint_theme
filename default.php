@@ -84,27 +84,5 @@
 		  <img src="http://piwik.victorasteinza.com/piwik.php?idsite=3&amp;rec=1" style="border:0" alt="" />
 		</noscript>
 		<!-- End Piwik Code -->
-		<!-- UserVoice -->
-		<script type="text/javascript">
-		var uservoiceOptions = {
-		key: 'puzzledpint',
-		host: 'puzzledpint.uservoice.com', 
-		forum: '80327',
-		alignment: 'right',
-		background_color:'#d37c31', 
-		text_color: 'white',
-		hover_color: '#1d1f21',
-		lang: 'en',
-		showTab: true
-  		};
-  		function _loadUserVoice() {
-    		var s = document.createElement('script');
-    		s.src = ("https:" == document.location.protocol ? "https://" : "http://") + "uservoice.com/javascripts/widgets/tab.js";
-    		document.getElementsByTagName('head')[0].appendChild(s);
-  		}
-  		_loadSuper = window.onload;
-  		window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
-		</script>
-		<!-- End UserVoice -->
 	</body>
 </html>
