@@ -86,7 +86,7 @@ h2 {
   height: 0;
 }
 #wrapper #header #logo {
-  width: 400px;
+  width: 300px;
   float: left;
 }
 #wrapper #header #logo h1 {
@@ -101,7 +101,7 @@ h2 {
 }
 #wrapper #header #logo h1 a span { display: none; }
 #wrapper #header #navigation {
-  width: 500px;
+  width: 600px;
   height: 95px;
   float: right;
 }
